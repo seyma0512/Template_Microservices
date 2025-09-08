@@ -1,0 +1,24 @@
+{
+  "name": "template_microservices",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo para plataforma con microservicios (NestJS, NextJS, Prisma, Kafka, Postgres)",
+  "scripts": {
+    "docker:up": "docker compose -f infra/docker/docker-compose.yml up -d",
+    "docker:down": "docker compose -f infra/docker/docker-compose.yml down",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "pnpm -r test"
+  },
+  "keywords": [],
+  "authors": [
+    "seyma0512",
+    "nelhoesp"
+  ],
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/swagger": "^11.2.0",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
