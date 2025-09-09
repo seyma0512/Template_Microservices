@@ -1,13 +1,23 @@
 {
   "name": "auth",
   "version": "1.0.0",
-  "description": "",
+  "description": "Microservicio de autenticación del monorepo",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "migrate": "prisma migrate dev",
+    "generate": "prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "microservice",
+    "auth",
+    "nestjs",
+    "prisma"
+  ],
+  "author": "seyma0512",
   "license": "ISC",
   "packageManager": "pnpm@10.15.1",
   "dependencies": {
@@ -17,6 +27,9 @@
     "@nestjs/platform-express": "^11.1.6",
     "@nestjs/swagger": "^11.2.0",
     "@prisma/client": "^6.15.0",
+    "bcrypt": "^6.0.0",
+    "jose": "^6.1.0",
+    "jsonwebtoken": "^9.0.2",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.2",
     "swagger-ui-express": "^5.0.1"
