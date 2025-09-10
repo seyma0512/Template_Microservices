@@ -9,7 +9,7 @@ export class AppController{
             service: 'API Gateway',
             status: 'Alive',
             version: 'Beta 1.0.0',
-            port: 3000,
+            port: 4000,
             timestamp: new Date(),
             code: HttpStatus.OK
         }
