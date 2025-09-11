@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { ColorDto } from '../../../packages/shared/src/dto/color.dto';
+import { ColorDto } from '@repo/shared/dto/color.dto';
 
 export default function HomePage() {
   const [color, setColor] = useState('');

@@ -12,7 +12,14 @@
     "dev:auth": "pnpm --filter ./apps/auth dev",
     "dev:gateway": "pnpm --filter ./api-gateway dev",
     "dev:web": "pnpm --filter ./web dev",
-    "dev:all": "concurrently \"pnpm dev:auth\" \"pnpm dev:gateway\" \"pnpm dev:web\""
+    "dev:shared": "pnpm --filter @repo/shared build:watch",
+
+    "dev:all": "concurrently \"pnpm dev:shared\" \"pnpm dev:auth\" \"pnpm dev:gateway\" \"pnpm dev:web\"",
+  
+    "build:all": "pnpm install && pnpm --filter @repo/shared build && pnpm --filter ./apps/auth build && pnpm --filter ./api-gateway build && pnpm --filter ./web build",
+    
+    "start:all": "concurrently \"pnpm --filter ./apps/auth start\" \"pnpm --filter ./api-gateway start\" \"pnpm --filter ./web start\""
+
   },
   "keywords": [],
   "authors": [

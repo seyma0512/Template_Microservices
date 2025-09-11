@@ -1,7 +1,7 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { firstValueFrom } from 'rxjs';
-import { ColorDto } from '../../packages/shared/src/dto/color.dto';
+import { ColorDto } from '@repo/shared/dto/color.dto';
 
 @Controller('colors')
 export class ColorsController {
